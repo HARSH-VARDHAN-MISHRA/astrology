@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Astrology</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- stylesheet -->
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/js/plugin/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/js/plugin/airdatepicker/datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="as_loader">
+        <img src="./assets/images/loader.png" alt="" class="img-responsive">
+    </div>
+    <div class="as_main_wrapper">
+
+        <!-- Header  -->
+
+        <section class="as_header_wrapper">
+            <div class="as_logo">
+                <a href="./index.html">
+                    <!-- <img src="./assets/images/logo.svg" alt=""> -->
+                    <h3>LOGO</h3>
+                </a>
+            </div>
+            <div class="as_header_detail">
+
+                <div class="as_info_detail">
+                    <ul>
+                        <li>
+                            <a href="tel:+919354757842">
+                                <div class="as_infobox">
+                                    <span class="as_infoicon">
+                                        <img src="./assets/images/svg/headphone.svg" alt="">
+                                    </span>
+                                    <span class="as_orange">Talk to our Astrogers -</span>+91 93547 57842
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:support@website.com">
+                                <div class="as_infobox">
+                                    <span class="as_infoicon">
+                                        <img src="./assets/images/svg/mail1.svg" alt="">
+                                    </span>
+                                    <span class="as_orange">Talk to our Astrogers -</span>support@website.com
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="as_menu_wrapper">
+                    <span class="as_toggle bg_overlay">
+                        <img src="./assets/images/svg/menu.svg" alt="">
+                    </span>
+                    <div class="as_menu">
+                        <ul>
+                            <li><a href="./index.html" class="active">home</a></li>
+                            <li><a href="./about.html">about</a></li>
+                            <li><a href="./services.html">services</a></li>
+
+                            <li><a href="./appointment.html">appointment</a></li>
+                            <li><a href="./contact.html">contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="as_search_wrapper">
+                        <img src="./assets/images/search.png" alt="" class="as_search">
+
+                        <div class="as_search_boxpopup">
+                            <a href="javascript:;" class="as_cancel"><svg version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="25px" height="25px" x="0px" y="0px" viewBox="0 0 511.76 511.76"
+                                    style="enable-background:new 0 0 511.76 511.76;" xml:space="preserve">
+                                    <g>
+                                        <g>
+                                            <path
+                                                d="M436.896,74.869c-99.84-99.819-262.208-99.819-362.048,0c-99.797,99.819-99.797,262.229,0,362.048 c49.92,49.899,115.477,74.837,181.035,74.837s131.093-24.939,181.013-74.837C536.715,337.099,536.715,174.688,436.896,74.869z M361.461,331.317c8.341,8.341,8.341,21.824,0,30.165c-4.16,4.16-9.621,6.251-15.083,6.251c-5.461,0-10.923-2.091-15.083-6.251 l-75.413-75.435l-75.392,75.413c-4.181,4.16-9.643,6.251-15.083,6.251c-5.461,0-10.923-2.091-15.083-6.251 c-8.341-8.341-8.341-21.845,0-30.165l75.392-75.413l-75.413-75.413c-8.341-8.341-8.341-21.845,0-30.165 c8.32-8.341,21.824-8.341,30.165,0l75.413,75.413l75.413-75.413c8.341-8.341,21.824-8.341,30.165,0 c8.341,8.32,8.341,21.824,0,30.165l-75.413,75.413L361.461,331.317z" />
+                                        </g>
+                                    </g>
+                                    <g> </g>
+                                    <g> </g>
+                                    <g> </g>
+                                    <g> </g>
+                                    <g> </g>
+                                    <g> </g>
+                                    <g> </g>
+                                    <g> </g>
+                                    <g> </g>
+                                    <g> </g>
+                                    <g> </g>
+                                    <g> </g>
+                                    <g> </g>
+                                    <g> </g>
+                                    <g> </g>
+                                </svg></a>
+                            <div class="as_search_inner">
+                                <div class="as_search_widget">
+                                    <input type="text" name="" class="form-control" id="" placeholder="Search...">
+                                    <a href="#"><img src="./assets/images/svg/search.svg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span class="as_body_overlay"></span>
+            </div>
+        </section>
+
+        <section class="as_banner_wrapper">
+            <div class="container-fluid">
+                <div class="row as_verticle_center">
+                    <div class="col-lg-6 order-lg-1 col-md-6 order-md-1 col-sm-12 order-sm-1 col-12 order-2">
+                        <div class="as_banner_slider">
+                            <div class="as_banner_detail">
+                                <h5 class="as_orange">What’s Your Sign ?</h5>
+                                <h1>Read Your Daily <br> Horoscope Today</h1>
+                                <p>Discover insights about your day based on the alignment of the stars. Whether you're
+                                    an adventurous Aries, a practical Virgo, or a passionate Scorpio, tap into cosmic
+                                    wisdom and explore what the universe has in store for you. Start your journey
+                                    towards self-awareness and fulfillment by reading your daily horoscope.</p>
+                                <a href="./about.html" class="as_btn">read more</a>
+                            </div>
+                            <div class="as_banner_detail">
+                                <h5 class="as_orange">Unveil Your Cosmic Path</h5>
+                                <h1>Your Zodiac Awaits <br> Find Today’s Insights</h1>
+                                <p>From career guidance to love life revelations, your horoscope reveals clues to help
+                                    you navigate each day. Embrace the wisdom of the stars and see what’s written for
+                                    you. Connect deeper with the universe’s guidance, crafted just for your sign.</p>
+                                <a href="./about.html" class="as_btn">discover more</a>
+                            </div>
+                            <div class="as_banner_detail">
+                                <h5 class="as_orange">Unlock the Power of Astrology</h5>
+                                <h1>See What’s in Store <br> For You Today</h1>
+                                <p>Every day brings new energy and opportunities! Whether you’re a confident Leo, a
+                                    sensitive Cancer, or a bold Sagittarius, find out how today’s horoscope can inspire
+                                    you to make the most of every moment. Let the stars be your guide.</p>
+                                <a href="./about.html" class="as_btn">learn more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-2 col-md-6 order-md-2 col-sm-12 order-sm-2 col-12 order-1">
+                        <div class="as_banner_img text-center">
+                            <img src="./assets/images/banner_image.png" alt="" class="img-responsive">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="as_about_wrapper as_padderTop80 as_padderBottom80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                        <div class="as_about_slider">
+                            <div>
+                                <div class="as_aboutimg text-right">
+                                    <img src="./assets/images/about1.jpg" alt="" class="img-responsive">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="as_aboutimg text-right">
+                                    <img src="./assets/images/about2.jpg" alt="" class="img-responsive">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="as_aboutimg text-right">
+                                    <img src="./assets/images/about3.jpg" alt="" class="img-responsive">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="as_aboutimg text-right">
+                                    <img src="./assets/images/about4.jpg" alt="" class="img-responsive">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                        <h1 class="as_heading">Know About Astrology</h1>
+                        <p>Astrology is the ancient art of understanding how celestial bodies influence our lives on
+                            Earth. From personality traits to life’s big questions, the alignment of the stars and
+                            planets offers insights that have guided people for centuries.</p>
+                        <p>Each zodiac sign reflects unique qualities and tendencies, helping us understand ourselves
+                            and others better. Dive into the world of astrology to uncover the mysteries of your sign,
+                            explore compatibility with others, and gain cosmic wisdom for your life journey.</p>
+
+                        <a href="./about.html" class="as_btn">read more</a>
+
+                        <div class="as_contact_expert">
+                            <span class="as_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    preserveAspectRatio="xMidYMid" width="20" height="20" viewBox="0 0 20 20">
+                                    <defs>
+                                        <style>
+                                            .cls-1 {
+                                                fill: #fff;
+                                                fill-rule: evenodd
+                                            }
+                                        </style>
+                                    </defs>
+                                    <path
+                                        d="M19.797,10.487 C19.668,10.616 19.493,10.689 19.310,10.689 C18.929,10.689 18.620,10.380 18.620,9.999 C18.615,5.241 14.759,1.385 10.000,1.379 C9.619,1.379 9.310,1.070 9.310,0.689 C9.310,0.308 9.619,-0.000 10.000,-0.000 C15.520,0.006 19.993,4.478 19.999,9.999 C19.999,10.183 19.927,10.358 19.797,10.487 ZM15.172,9.999 C15.169,7.144 12.855,4.830 10.000,4.827 C9.619,4.827 9.310,4.518 9.310,4.138 C9.310,3.757 9.619,3.448 10.000,3.448 C13.617,3.452 16.547,6.383 16.551,9.999 C16.551,10.380 16.243,10.689 15.862,10.689 C15.481,10.689 15.172,10.380 15.172,9.999 ZM12.864,14.155 C13.076,14.182 13.288,14.109 13.438,13.957 L14.982,12.413 C15.209,12.186 15.563,12.146 15.835,12.317 L19.655,14.775 C19.955,14.965 20.063,15.350 19.905,15.668 L18.045,19.616 C17.918,19.873 17.645,20.024 17.360,19.995 C15.394,19.789 10.563,18.932 5.815,14.183 C1.067,9.435 0.210,4.604 0.003,2.638 C-0.026,2.352 0.125,2.079 0.382,1.952 L4.331,0.093 C4.649,-0.067 5.036,0.043 5.224,0.344 L7.684,4.164 C7.854,4.436 7.814,4.790 7.586,5.017 L6.042,6.560 C5.890,6.711 5.818,6.924 5.845,7.135 C5.942,7.900 6.373,9.809 8.282,11.718 C10.191,13.627 12.099,14.057 12.864,14.155 Z"
+                                        class="cls-1" />
+                                </svg>
+                            </span>
+                            <div>
+                                <h5 class="as_white">Contact Our Expert Astrologers</h5>
+                                <h1 class="as_orange">+91-93547 57842</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="as_service_wrapper as_padderTop80 as_padderBottom80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="as_heading as_heading_center">Our Services</h1>
+                        <p class="as_font14 as_padderBottom5">Explore a variety of personalized astrology services
+                            designed to bring clarity and guidance to your life. From daily horoscopes <br> and in-depth
+                            birth chart readings to compatibility analyses and live consultations, each service is
+                            tailored to help you connect <br> with the cosmos and understand the unique energies that
+                            shape your journey.</p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="as_service_box text-center">
+                            <span class="as_icon">
+                                <img src="./assets/images/svg/service1.svg" alt="">
+                            </span>
+
+                            <h4 class="as_subheading">Vastu Shastra</h4>
+                            <p>Bring harmony to your space with Vastu Shastra, aligning your environment for balance,
+                                prosperity, and well-being.</p>
+                            <!-- <a href="./services.html" class="as_link">read more</a> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="as_service_box text-center">
+                            <span class="as_icon">
+                                <img src="./assets/images/svg/service2.svg" alt="">
+                            </span>
+
+                            <h4 class="as_subheading">Birth Journal</h4>
+                            <p>Uncover life insights with a personalized Birth Journal, mapping key events from your
+                                astrological chart.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="as_service_box text-center">
+                            <span class="as_icon">
+                                <img src="./assets/images/svg/service3.svg" alt="">
+                            </span>
+
+                            <h4 class="as_subheading">Manglik Dosha</h4>
+                            <p>Gain clarity on Manglik Dosha effects and remedies for harmony in relationships and
+                                well-being.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="as_service_box text-center">
+                            <span class="as_icon">
+                                <img src="./assets/images/svg/service4.svg" alt="">
+                            </span>
+
+                            <h4 class="as_subheading">Lal Kitab</h4>
+                            <p>Explore practical astrological remedies from Lal Kitab to resolve challenges and improve
+                                fortune.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="as_service_box text-center">
+                            <span class="as_icon">
+                                <img src="./assets/images/svg/service5.svg" alt="">
+                            </span>
+
+                            <h4 class="as_subheading">Crystal Ball</h4>
+                            <p>Peer into the future with crystal ball readings, offering guidance on life’s path and
+                                decisions.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="as_service_box text-center">
+                            <span class="as_icon">
+                                <img src="./assets/images/svg/service6.svg" alt="">
+                            </span>
+
+                            <h4 class="as_subheading">Kundli Dosh</h4>
+                            <p>Identify and address Kundli Doshas for a balanced life and improved personal harmony.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="as_service_box text-center">
+                            <span class="as_icon">
+                                <img src="./assets/images/svg/service7.svg" alt="">
+                            </span>
+
+                            <h4 class="as_subheading">Tarot Reading</h4>
+                            <p>Receive insights on love, career, and more with intuitive Tarot readings tailored to your
+                                journey.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="as_service_box text-center">
+                            <span class="as_icon">
+                                <img src="./assets/images/svg/service8.svg" alt="">
+                            </span>
+
+                            <h4 class="as_subheading">Palm Reading</h4>
+                            <p>Discover your life’s path through the art of palmistry, revealing potential and destiny.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="as_zodiac_sign_wrapper as_padderTop80 as_padderBottom80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="as_heading as_heading_center">Choose Your Zodiac Sign</h1>
+                        <p class="as_font14 as_margin0">Discover insights for each zodiac sign. Click to learn more
+                            about what the stars say for you today.</p>
+
+                        <div class="as_zodiac_inner text-left">
+                            <div class="row as_verticle_center">
+                                <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+                                    <ul class="as_sign_ul">
+                                        <li class="as_sign_box">
+                                            <a href="javascript:void(0)">
+                                                <span class="as_sign">
+                                                    <img src="./assets/images/svg/sign1.svg" alt="Aries Icon">
+                                                </span>
+                                                <div>
+                                                    <h5>Aries</h5>
+                                                    <p>Mar 21 - Apr 19</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="as_sign_box">
+                                            <a href="javascript:void(0)">
+                                                <span class="as_sign">
+                                                    <img src="./assets/images/svg/sign2.svg" alt="Taurus Icon">
+                                                </span>
+                                                <div>
+                                                    <h5>Taurus</h5>
+                                                    <p>Apr 20 - May 20</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="as_sign_box">
+                                            <a href="javascript:void(0)">
+                                                <span class="as_sign">
+                                                    <img src="./assets/images/svg/sign3.svg" alt="Gemini Icon">
+                                                </span>
+                                                <div>
+                                                    <h5>Gemini</h5>
+                                                    <p>May 21 - Jun 20</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="as_sign_box">
+                                            <a href="javascript:void(0)">
+                                                <span class="as_sign">
+                                                    <img src="./assets/images/svg/sign4.svg" alt="Cancer Icon">
+                                                </span>
+                                                <div>
+                                                    <h5>Cancer</h5>
+                                                    <p>Jun 21 - Jul 22</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="as_sign_box">
+                                            <a href="javascript:void(0)">
+                                                <span class="as_sign">
+                                                    <img src="./assets/images/svg/sign5.svg" alt="Leo Icon">
+                                                </span>
+                                                <div>
+                                                    <h5>Leo</h5>
+                                                    <p>Jul 23 - Aug 22</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="as_sign_box">
+                                            <a href="javascript:void(0)">
+                                                <span class="as_sign">
+                                                    <img src="./assets/images/svg/sign6.svg" alt="Virgo Icon">
+                                                </span>
+                                                <div>
+                                                    <h5>Virgo</h5>
+                                                    <p>Aug 23 - Sep 22</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                                    <div class="as_sign_img text-center">
+                                        <img src="./assets/images/zodiac.png" alt="Zodiac Wheel" class="img-responsive">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+                                    <ul class="as_sign_ul as_sign_ul_right">
+                                        <li class="as_sign_box">
+                                            <a href="javascript:void(0)">
+                                                <span class="as_sign">
+                                                    <img src="./assets/images/svg/sign7.svg" alt="Libra Icon">
+                                                </span>
+                                                <div>
+                                                    <h5>Libra</h5>
+                                                    <p>Sep 23 - Oct 22</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="as_sign_box">
+                                            <a href="javascript:void(0)">
+                                                <span class="as_sign">
+                                                    <img src="./assets/images/svg/sign8.svg" alt="Scorpio Icon">
+                                                </span>
+                                                <div>
+                                                    <h5>Scorpio</h5>
+                                                    <p>Oct 23 - Nov 21</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="as_sign_box">
+                                            <a href="javascript:void(0)">
+                                                <span class="as_sign">
+                                                    <img src="./assets/images/svg/sign9.svg" alt="Sagittarius Icon">
+                                                </span>
+                                                <div>
+                                                    <h5>Sagittarius</h5>
+                                                    <p>Nov 22 - Dec 21</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="as_sign_box">
+                                            <a href="javascript:void(0)">
+                                                <span class="as_sign">
+                                                    <img src="./assets/images/svg/sign10.svg" alt="Capricorn Icon">
+                                                </span>
+                                                <div>
+                                                    <h5>Capricorn</h5>
+                                                    <p>Dec 22 - Jan 19</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="as_sign_box">
+                                            <a href="javascript:void(0)">
+                                                <span class="as_sign">
+                                                    <img src="./assets/images/svg/sign11.svg" alt="Aquarius Icon">
+                                                </span>
+                                                <div>
+                                                    <h5>Aquarius</h5>
+                                                    <p>Jan 20 - Feb 18</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="as_sign_box">
+                                            <a href="javascript:void(0)">
+                                                <span class="as_sign">
+                                                    <img src="./assets/images/svg/sign12.svg" alt="Pisces Icon">
+                                                </span>
+                                                <div>
+                                                    <h5>Pisces</h5>
+                                                    <p>Feb 19 - Mar 20</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="as_appointment_wrapper as_padderTop80 as_padderBottom80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="as_heading as_heading_center text-center">Make Your Appointment To Discuss Any Problem</h2>
+                        <p class="as_font14 as_padderBottom10 text-center">Our team of qualified astrologers is here to provide you with personalized guidance and insights. Schedule your appointment today to discuss your concerns and receive tailored advice that can help you navigate life’s challenges.</p>
+                        <p class="as_font14 as_padderBottom20 text-center">Please fill out the form below to book your appointment. We look forward to assisting you!</p>
+        
+                        <div class="as_journal_box_wrapper">
+                            <form>
+                                <h3 class="text-center as_subheading">Appointment Form</h3>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <label>Name</label>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" placeholder="Your Name" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <label>Email</label>
+                                        <div class="form-group">
+                                            <input class="form-control" type="email" placeholder="Your Email" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <label>Mobile Number</label>
+                                        <div class="form-group">
+                                            <input class="form-control" type="tel" placeholder="Your Mobile Number" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <label>Preferred Date</label>
+                                        <div class="form-group">
+                                            <input class="form-control" type="date" placeholder="Select Date" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <label>Preferred Time</label>
+                                        <div class="form-group">
+                                            <input class="form-control" type="time" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <label>Reason for Appointment</label>
+                                        <div class="form-group">
+                                            <textarea placeholder="Briefly describe your concerns" class="form-control" required></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center as_padderTop20">
+                                        <button type="submit" class="as_btn">Make an Appointment</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="as_whychoose_wrapper as_padderTop80 as_padderBottom50">
+            <div class="container">
+                <div class="row as_verticle_center">
+                    <div class="col-lg-3 col-md-12">
+                        <h1 class="as_heading">Why Choose Us</h1>
+                        <p class="as_font14 as_margin0">With years of expertise in astrology, we provide personalized
+                            insights and guidance to help you navigate life’s challenges. Our team of qualified
+                            astrologers is dedicated to delivering accurate readings and tailored solutions, ensuring a
+                            transformative experience for every client. Join thousands of satisfied customers who have
+                            found clarity and direction with our services.</p>
+                    </div>
+                    <div class="col-lg-9 col-md-12">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_whychoose_box text-center">
+                                    <span class="as_number"><span><span data-from="0" data-to="150"
+                                                data-speed="2000">150</span>+</span><img
+                                            src="./assets/images/svg/shape.svg" alt=""></span>
+                                    <h4>Qualified Astrologers</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_whychoose_box text-center">
+                                    <span class="as_number"><span><span data-from="0" data-to="500"
+                                                data-speed="5000">500</span>+</span><img
+                                            src="./assets/images/svg/shape.svg" alt=""></span>
+                                    <h4>Success Horoscope</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_whychoose_box text-center">
+                                    <span class="as_number"><span><span data-from="0" data-to="500"
+                                                data-speed="5000">500</span>+</span><img
+                                            src="./assets/images/svg/shape.svg" alt=""></span>
+                                    <h4>Clients Served</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_whychoose_box text-center">
+                                    <span class="as_number"><span><span data-from="0" data-to="1000"
+                                                data-speed="5000">1000</span>+</span><img
+                                            src="./assets/images/svg/shape.svg" alt=""></span>
+                                    <h4>Trusted Clients</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_whychoose_box text-center">
+                                    <span class="as_number"><span><span data-from="0" data-to="15"
+                                                data-speed="5000">15</span>+</span><img
+                                            src="./assets/images/svg/shape.svg" alt=""></span>
+                                    <h4>Years of Experience</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_whychoose_box text-center">
+                                    <span class="as_number"><span><span data-from="0" data-to="800"
+                                                data-speed="5000">800</span>+</span><img
+                                            src="./assets/images/svg/shape.svg" alt=""></span>
+                                    <h4>Types of Horoscopes</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        
+        <section class="as_customer_wrapper as_padderBottom80 as_padderTop80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="as_heading as_heading_center">What Our Customers Say</h1>
+                        <p class="as_font14 as_margin0 as_padderBottom50">Discover how astrology has positively impacted
+                            our clients' lives.</p>
+                    </div>
+
+                    <div class="row as_customer_slider">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="as_customer_box text-center">
+                                <span class="as_customer_img">
+                                    <img src="./assets/images/customer1.jpeg" alt="Customer Image">
+                                    <span><img src="./assets/images/svg/quote1.svg" alt="Quote Icon"></span>
+                                </span>
+                                <p class="as_margin0">"I consulted with my astrologer for guidance on my career path,
+                                    and the insights were truly enlightening!"</p>
+                                <h3>Harsh Vardhan</h3>
+                                <p class="as_margin0">Astrologer</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6">
+                            <div class="as_customer_box text-center">
+                                <span class="as_customer_img">
+                                    <img src="./assets/images/customer2.png" alt="Customer Image">
+                                    <span><img src="./assets/images/svg/quote1.svg" alt="Quote Icon"></span>
+                                </span>
+                                <p class="as_margin0">"My reading was incredible! The understanding of my astrological
+                                    chart opened my eyes to new possibilities."</p>
+                                <h3>Meera Singh</h3>
+                                <p class="as_margin0">Client</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6">
+                            <div class="as_customer_box text-center">
+                                <span class="as_customer_img">
+                                    <img src="./assets/images/customer3.jpg" alt="Customer Image">
+                                    <span><img src="./assets/images/svg/quote1.svg" alt="Quote Icon"></span>
+                                </span>
+                                <p class="as_margin0">"Thanks to the guidance received, I feel more confident in my
+                                    relationships and decisions."</p>
+                                <h3>Amit Sharma</h3>
+                                <p class="as_margin0">Client</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6">
+                            <div class="as_customer_box text-center">
+                                <span class="as_customer_img">
+                                    <img src="./assets/images/customer2.png" alt="Customer Image">
+                                    <span><img src="./assets/images/svg/quote1.svg" alt="Quote Icon"></span>
+                                </span>
+                                <p class="as_margin0">"The predictions have always been spot on! I appreciate the
+                                    dedication and clarity provided."</p>
+                                <h3>Neha Gupta</h3>
+                                <p class="as_margin0">Client</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- </div> -->
+        
+
+        <!-- Footer  -->
+
+        <section class="as_footer_wrapper ">
+            <div class="container">
+
+                <div class="as_footer_inner ">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                            <div class="as_footer_widget">
+                                <div class="as_footer_logo">
+                                    <a href="./index.html">
+                                        <h3>LOGO</h3>
+                                    </a>
+                                </div>
+                                <p>Welcome to our astrology platform, where we believe that the stars hold the key to understanding our lives. </p>
+                                
+                                <div class="as_share_box">
+                                    <p>Follow Us</p>
+                                    <ul>
+                                        <li>
+                                            <a href="https://www.facebook.com/" target="_blank">
+                                                <img src="./assets/images/svg/facebook.svg" alt="Facebook">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://twitter.com/" target="_blank">
+                                                <img src="./assets/images/svg/twitter.svg" alt="Twitter">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.google.com" target="_blank">
+                                                <img src="./assets/images/svg/google.svg" alt="Google">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.youtube.com/" target="_blank">
+                                                <img src="./assets/images/svg/youtube.svg" alt="YouTube">
+                                            </a>
+                                        </li>
+                                    </ul>                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                            <div class="as_footer_widget">
+                                <h3 class="as_footer_heading">Our Services</h3>
+
+                                <ul>
+                                    <li>
+                                        <a href="./services.html">
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                     preserveAspectRatio="xMidYMid" width="8" height="12"
+                                                     viewBox="0 0 8 12">
+                                                    <path d="M8.000,5.998 L-0.002,11.997 L1.292,5.998 L-0.002,-0.001 L8.000,5.998 ZM1.265,9.924 L6.502,5.998 L1.265,2.071 L2.112,5.998 L1.265,9.924 ZM5.451,5.998 L2.496,8.213 L2.974,5.998 L2.496,3.783 L5.451,5.998 Z"
+                                                          class="cls-1" />
+                                                </svg>
+                                            </span> 
+                                            Vastu Shastra
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./services.html">
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                     preserveAspectRatio="xMidYMid" width="8" height="12"
+                                                     viewBox="0 0 8 12">
+                                                    <path d="M8.000,5.998 L-0.002,11.997 L1.292,5.998 L-0.002,-0.001 L8.000,5.998 ZM1.265,9.924 L6.502,5.998 L1.265,2.071 L2.112,5.998 L1.265,9.924 ZM5.451,5.998 L2.496,8.213 L2.974,5.998 L2.496,3.783 L5.451,5.998 Z"
+                                                          class="cls-1" />
+                                                </svg>
+                                            </span> 
+                                            Birth Journal
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./services.html">
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                     preserveAspectRatio="xMidYMid" width="8" height="12"
+                                                     viewBox="0 0 8 12">
+                                                    <path d="M8.000,5.998 L-0.002,11.997 L1.292,5.998 L-0.002,-0.001 L8.000,5.998 ZM1.265,9.924 L6.502,5.998 L1.265,2.071 L2.112,5.998 L1.265,9.924 ZM5.451,5.998 L2.496,8.213 L2.974,5.998 L2.496,3.783 L5.451,5.998 Z"
+                                                          class="cls-1" />
+                                                </svg>
+                                            </span> 
+                                            Manglik Dosha
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./services.html">
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                     preserveAspectRatio="xMidYMid" width="8" height="12"
+                                                     viewBox="0 0 8 12">
+                                                    <path d="M8.000,5.998 L-0.002,11.997 L1.292,5.998 L-0.002,-0.001 L8.000,5.998 ZM1.265,9.924 L6.502,5.998 L1.265,2.071 L2.112,5.998 L1.265,9.924 ZM5.451,5.998 L2.496,8.213 L2.974,5.998 L2.496,3.783 L5.451,5.998 Z"
+                                                          class="cls-1" />
+                                                </svg>
+                                            </span> 
+                                            Lal Kitab
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./services.html">
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                     preserveAspectRatio="xMidYMid" width="8" height="12"
+                                                     viewBox="0 0 8 12">
+                                                    <path d="M8.000,5.998 L-0.002,11.997 L1.292,5.998 L-0.002,-0.001 L8.000,5.998 ZM1.265,9.924 L6.502,5.998 L1.265,2.071 L2.112,5.998 L1.265,9.924 ZM5.451,5.998 L2.496,8.213 L2.974,5.998 L2.496,3.783 L5.451,5.998 Z"
+                                                          class="cls-1" />
+                                                </svg>
+                                            </span> 
+                                            Crystal Ball
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./services.html">
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                     preserveAspectRatio="xMidYMid" width="8" height="12"
+                                                     viewBox="0 0 8 12">
+                                                    <path d="M8.000,5.998 L-0.002,11.997 L1.292,5.998 L-0.002,-0.001 L8.000,5.998 ZM1.265,9.924 L6.502,5.998 L1.265,2.071 L2.112,5.998 L1.265,9.924 ZM5.451,5.998 L2.496,8.213 L2.974,5.998 L2.496,3.783 L5.451,5.998 Z"
+                                                          class="cls-1" />
+                                                </svg>
+                                            </span> 
+                                            Kundli Dosh
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./services.html">
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                     preserveAspectRatio="xMidYMid" width="8" height="12"
+                                                     viewBox="0 0 8 12">
+                                                    <path d="M8.000,5.998 L-0.002,11.997 L1.292,5.998 L-0.002,-0.001 L8.000,5.998 ZM1.265,9.924 L6.502,5.998 L1.265,2.071 L2.112,5.998 L1.265,9.924 ZM5.451,5.998 L2.496,8.213 L2.974,5.998 L2.496,3.783 L5.451,5.998 Z"
+                                                          class="cls-1" />
+                                                </svg>
+                                            </span> 
+                                            Tarot Reading
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./services.html">
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                     preserveAspectRatio="xMidYMid" width="8" height="12"
+                                                     viewBox="0 0 8 12">
+                                                    <path d="M8.000,5.998 L-0.002,11.997 L1.292,5.998 L-0.002,-0.001 L8.000,5.998 ZM1.265,9.924 L6.502,5.998 L1.265,2.071 L2.112,5.998 L1.265,9.924 ZM5.451,5.998 L2.496,8.213 L2.974,5.998 L2.496,3.783 L5.451,5.998 Z"
+                                                          class="cls-1" />
+                                                </svg>
+                                            </span> 
+                                            Palm Reading
+                                        </a>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                            <div class="as_footer_widget">
+                                <h3 class="as_footer_heading">Quick Links</h3>
+
+                                <ul>
+                                    <li><a href="./about.html">
+                                        <span><svg xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    preserveAspectRatio="xMidYMid" width="8" height="12"
+                                                    viewBox="0 0 8 12">
+                                                    <path
+                                                        d="M8.000,5.998 L-0.002,11.997 L1.292,5.998 L-0.002,-0.001 L8.000,5.998 ZM1.265,9.924 L6.502,5.998 L1.265,2.071 L2.112,5.998 L1.265,9.924 ZM5.451,5.998 L2.496,8.213 L2.974,5.998 L2.496,3.783 L5.451,5.998 Z"
+                                                        class="cls-1" />
+                                                </svg>
+                                            </span> 
+                                            About Us</a></li>
+                                    <li><a href="./services.html"><span><svg xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    preserveAspectRatio="xMidYMid" width="8" height="12"
+                                                    viewBox="0 0 8 12">
+                                                    <path
+                                                        d="M8.000,5.998 L-0.002,11.997 L1.292,5.998 L-0.002,-0.001 L8.000,5.998 ZM1.265,9.924 L6.502,5.998 L1.265,2.071 L2.112,5.998 L1.265,9.924 ZM5.451,5.998 L2.496,8.213 L2.974,5.998 L2.496,3.783 L5.451,5.998 Z"
+                                                        class="cls-1" />
+                                                </svg></span> Services
+                                        </a></li>
+                                    <li><a href="./appointment.html"><span><svg xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    preserveAspectRatio="xMidYMid" width="8" height="12"
+                                                    viewBox="0 0 8 12">
+                                                    <path
+                                                        d="M8.000,5.998 L-0.002,11.997 L1.292,5.998 L-0.002,-0.001 L8.000,5.998 ZM1.265,9.924 L6.502,5.998 L1.265,2.071 L2.112,5.998 L1.265,9.924 ZM5.451,5.998 L2.496,8.213 L2.974,5.998 L2.496,3.783 L5.451,5.998 Z"
+                                                        class="cls-1" />
+                                                </svg></span> Appointment</a></li>
+                                    <li><a href="./contact.html"><span><svg xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    preserveAspectRatio="xMidYMid" width="8" height="12"
+                                                    viewBox="0 0 8 12">
+                                                    <path
+                                                        d="M8.000,5.998 L-0.002,11.997 L1.292,5.998 L-0.002,-0.001 L8.000,5.998 ZM1.265,9.924 L6.502,5.998 L1.265,2.071 L2.112,5.998 L1.265,9.924 ZM5.451,5.998 L2.496,8.213 L2.974,5.998 L2.496,3.783 L5.451,5.998 Z"
+                                                        class="cls-1" />
+                                                </svg></span> Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                            <div class="as_footer_widget">
+                                <h3 class="as_footer_heading">Contact Us</h3>
+
+                                <ul class="as_contact_list">
+                                    <li>
+                                        <img src="./assets/images/svg/map.svg" alt="">
+                                        <p>Kashmiri gate, Delhi - 110072 </p>
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/svg/address.svg" alt="">
+                                        <p>
+                                            <a href="mailto:support@website.com">support@website.com</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/svg/call.svg" alt="">
+                                        <p>
+                                            <a href="tel:+919354757842">+91 93547 57842</a>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="as_copyright_wrapper text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Copyright &copy; 2024 Astrology. All Right Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <!-- javascript -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/plugin/slick/slick.min.js"></script>
+    <script src="./assets/js/plugin/countto/jquery.countTo.js"></script>
+    <script src="./assets/js/plugin/airdatepicker/datepicker.min.js"></script>
+    <script src="./assets/js/plugin/airdatepicker/i18n/datepicker.en.js"></script>
+    <script src="./assets/js/custom.js"></script>
+</body>
+
+</html>
