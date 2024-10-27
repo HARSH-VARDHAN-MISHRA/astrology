@@ -297,3 +297,58 @@ $(window).on('load',function(){
 
 
       
+
+// Add event listener to each "Buy Now" button
+document.querySelectorAll('.buy-btn').forEach(button => {
+  button.addEventListener('click', function() {
+      // Retrieve product details from data attributes
+      const name = this.getAttribute('data-name');
+      const price = this.getAttribute('data-price');
+      const image = this.getAttribute('data-image');
+
+      // Populate the modal with product information
+      document.getElementById('productName').textContent = name;
+      document.getElementById('productPrice').textContent = price;
+      document.getElementById('productImage').src = image;
+
+      // Show the modal
+      new bootstrap.Modal(document.getElementById('productModal')).show();
+  });
+});
+
+
+// Example JavaScript to open the modal programmatically
+
+
+function openServiceModal(serviceName) {
+  // Set the default option in the select dropdown
+  const select = document.getElementById("serviceSelect");
+  for (let option of select.options) {
+      option.selected = option.value === serviceName;
+  }
+
+  // Show the modal
+  $('#bookingModal').modal('show');
+}
+function closeServiceModal() {
+  
+  $('#bookingModal').modal('hide');
+}
+
+// Handle form submission
+document.getElementById('bookingForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  // Gather form data
+  const service = document.getElementById('serviceSelect').value;
+  const name = document.getElementById('userName').value;
+  const email = document.getElementById('userEmail').value;
+  const phone = document.getElementById('userPhone').value;
+  const message = document.getElementById('userMessage').value;
+
+  // Perform the booking logic here, like sending the data to a server or API
+  console.log("Booking Data:", { service, name, email, phone, message });
+
+  // Close the modal after submission
+  $('#bookingModal').modal('hide');
+});

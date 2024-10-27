@@ -2991,7 +2991,7 @@ textarea.form-control {
     margin: 0;
 }
 .modal .modal-dialog {
-    width: 100%;
+    width: 90%;
 }
 .as_zodiac_heading {
     font-size: 24px;
@@ -3267,7 +3267,30 @@ textarea.form-control {
 
 
 
+/* ==== Product ===  */
+.as_product_box .buy-btn{
+    display: block;
+    width: 100%;
+    background: #e6683c;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0.3rem 0rem;
+}
 
+
+#productModal .product-details {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+#productModal .product-details img {
+    max-width: 100%;
+    height: 80px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
 
 
 
@@ -3304,3 +3327,6 @@ textarea.form-control {
         left: 50%;
     }
 }
+
+
+

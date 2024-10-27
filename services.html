@@ -165,15 +165,19 @@
         <section class="as_service_wrapper as_padderBottom80">
             <div class="container">
                 <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="as_heading as_heading_center">Our Services</h1>
+
+                    </div>
 
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                         <div class="as_service_box text-center">
                             <span class="as_icon">
                                 <img src="./assets/images/numerology.jpg" alt="">
                             </span>
-
                             <h4 class="as_subheading">Numerology</h4>
                             <p>Numerology explores the mystical connection between numbers and one's life events. By assigning meaning to numbers derived from your birthdate and name, it aims to reveal your personality, strengths, and even predict your future to help you make better life choices</p>
+                            <button class="as_btn" onclick="openServiceModal('Numerology')">Book Now</button>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -181,9 +185,9 @@
                             <span class="as_icon">
                                 <img src="./assets/images/tarot-card.jpg" alt="">
                             </span>
-
                             <h4 class="as_subheading">Tarot Card</h4>
                             <p>Tarot cards, more than just fortune telling tools, are a symbolic map for navigating life's journey. Divided into Major Arcana (archetypal forces) and Minor Arcana (everyday situations), these 78 cards offer guidance and insights when interpreted by a reader</p>
+                            <button class="as_btn" onclick="openServiceModal('Tarot Card')">Book Now</button>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -193,7 +197,11 @@
                             </span>
 
                             <h4 class="as_subheading">Law of Attraction</h4>
-                            <p>The Law of Attraction is a belief that positive thoughts draw positive experiences, and vice versa. By focusing on your desires and maintaining a hopeful outlook, you can supposedly attract them into your life with ease through our divine guidance and support</p>
+                            <p>The Law of Attraction is a belief that positive thoughts draw positive experiences, and
+                                vice versa. By focusing on your desires and maintaining a hopeful outlook, you can
+                                supposedly attract them into your life with ease through our divine guidance and support
+                            </p>
+                            <button class="as_btn" onclick="openServiceModal('Law of Attraction')">Book Now</button>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -203,7 +211,10 @@
                             </span>
 
                             <h4 class="as_subheading">Switch Words</h4>
-                            <p>Switch words are short, powerful words believed to tap into your subconscious mind. By saying them repeatedly, you can supposedly influence your energy and bring about positive changes in your life, like attracting wealth or improving relationships</p>
+                            <p>Switch words are short, powerful words believed to tap into your subconscious mind. By
+                                saying them repeatedly, you can supposedly influence your energy and bring about
+                                positive changes in your life, like attracting wealth or improving relationships</p>
+                                <button class="as_btn" onclick="openServiceModal('Switch Words')">Book Now</button>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -213,7 +224,10 @@
                             </span>
 
                             <h4 class="as_subheading">Cosmic Healing</h4>
-                            <p>Explore the world of energy healing! Chakras, believed to be energy centers in your body, and Reiki, a technique to balance them using universal energy. Discover how this practice may promote well-being and guide you towards a more balanced you</p>
+                            <p>Explore the world of energy healing! Chakras, believed to be energy centers in your body,
+                                and Reiki, a technique to balance them using universal energy. Discover how this
+                                practice may promote well-being and guide you towards a more balanced you</p>
+                                <button class="as_btn" onclick="openServiceModal('Cosmic Healing')">Book Now</button>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -223,10 +237,13 @@
                             </span>
 
                             <h4 class="as_subheading">Angel Card</h4>
-                            <p>Ever wonder if angels have messages for you? Angel cards offer uplifting guidance and insights. Simply shuffle the deck, ask a question, and draw a card for an inspiring message from the angelic realm of beautiful imagery and simple interpretations</p>
+                            <p>Ever wonder if angels have messages for you? Angel cards offer uplifting guidance and
+                                insights. Simply shuffle the deck, ask a question, and draw a card for an inspiring
+                                message from the angelic realm of beautiful imagery and simple interpretations</p>
+                                <button class="as_btn" onclick="openServiceModal('Angel Card')">Book Now</button>
                         </div>
                     </div>
-                   
+
                 </div>
             </div>
         </section>
@@ -575,6 +592,50 @@
             </div>
         </section>
     </div>
+
+    <div id="bookingModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Book Your Service</h5>
+                    <button type="button" class="close" onclick="closeServiceModal()" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="bookingForm">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <!-- <label for="serviceSelect">Choose a Service:</label> -->
+                            <select id="serviceSelect" class="form-control" required>
+                                <option value="Numerology">Numerology</option>
+                                <option value="Tarot Card">Tarot Card</option>
+                                <option value="Law of Attraction">Law of Attraction</option>
+                                <option value="Switch Words">Switch Words</option>
+                                <option value="Cosmic Healing">Cosmic Healing</option>
+                                <option value="Angel Card">Angel Card</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input placeholder="Your Name:" type="text" id="userName" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input placeholder="Email Address:" type="email" id="userEmail" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input placeholder="Phone Number:" type="tel" id="userPhone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Additional Message (Optional):" id="userMessage" class="form-control" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="text-center mb-2">
+                        <button type="submit" class="as_btn">Confirm Booking</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
 
     <!-- javascript -->
     <script src="./assets/js/jquery.min.js"></script>
