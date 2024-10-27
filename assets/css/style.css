@@ -3125,13 +3125,29 @@ textarea.form-control {
     border-radius: 15px;
 }
 
+.follow_family .service-item{
+    background: #0e344d; 
+    display: inline-block;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
 .follow_family .as_icon {
     font-size: 3rem;
-    background: #0e344d; 
     color: white;
     padding: 1rem;
     border-radius: 5px;
     margin-bottom: 10px;
+}
+
+.follow_family .fa-facebook.as_icon{
+    background-color: #1877f2;
+}
+.follow_family .fa-instagram.as_icon{
+    background: radial-gradient(circle at 30% 30%, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+.follow_family .fa-youtube.as_icon{
+    background-color: #ff0000;
 }
 
 
