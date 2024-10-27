@@ -2890,7 +2890,7 @@ textarea.form-control {
         justify-content: center;
         flex-direction: column;
         padding: 10px;
-        display: none;
+        /* display: none; */
     }
     .as_right_info {
         padding-left: 5px;
@@ -3121,11 +3121,142 @@ textarea.form-control {
 
 .as_header_wrapper .as_logo img{
     height: 100px;
+    background: rgb(255, 255, 255);
     object-fit: contain;
+    border-radius: 15px;
 }
 
-/* .as_icon {
+.follow_family .as_icon {
     font-size: 3rem;
-    color: #00AAA9; 
+    background: #0e344d; 
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
     margin-bottom: 10px;
-} */
+}
+
+
+
+.as_footer_logo img{
+    height: 150px;
+    background: white;
+    border-radius: 15px;
+}
+
+
+
+
+
+
+
+
+/* ============= Icons ==============  */
+
+.social-float {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    z-index: 100;
+    transform: all 0.5s ease;
+    line-height: 46px;
+}
+
+.social-float::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    animation: pulse-border 1500ms ease-out infinite;
+}
+
+.whatsapp-float {
+    background-color: #25d366;
+    bottom: 140px;
+}
+
+.whatsapp-float::before {
+    background-color: #25d366;
+}
+
+.facebook-float {
+    background-color: #1877f2;
+    bottom: 200px;
+}
+
+.facebook-float::before {
+    background-color: #1877f2;
+}
+
+.instagram-float {
+    background: radial-gradient(circle at 30% 30%, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    bottom: 260px;
+}
+
+.instagram-float::before {
+    background: radial-gradient(circle at 30% 30%, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.youtube-float {
+    background-color: #ff0000;
+    bottom: 320px;
+}
+
+.youtube-float::before {
+    background-color: #ff0000;
+}
+
+.social-icon {
+    margin-top: 12px;
+}
+
+/* Keyframes for the pulse effect */
+@keyframes pulse-border {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .social-float {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        line-height: 38px;
+        right: 10px;
+    }
+    .social-icon{
+        line-height: 0.8 !important;
+    }
+    .whatsapp-float {
+        bottom: 100px;
+    }
+
+    .facebook-float {
+        bottom: 150px;
+    }
+
+    .instagram-float {
+        bottom: 200px;
+    }
+
+    .youtube-float {
+        bottom: 250px;
+    }
+}
