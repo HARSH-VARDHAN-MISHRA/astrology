@@ -726,11 +726,15 @@ span.select2-dropdown.select2-dropdown--above, .select2-container--open .select2
     display: none;
 }
 .as_banner_img img{
-    animation: spin 9s infinite linear;
+    /* animation: spin 9s infinite linear;
     -webkit-animation: spin 9s infinite linear;
-    -moz-animation: spin 9s infinite linear;
+    -moz-animation: spin 9s infinite linear; */
     display: inline-block;
-    width: 100%;
+    border-radius: 15px;
+    /* height: 380px;
+    width: 380px;
+    object-fit: cover; */
+    /* width: 100%; */
 }
 @-webkit-keyframes spin {
     0%  {-webkit-transform: rotate(0deg);}
@@ -3097,3 +3101,23 @@ textarea.form-control {
 }
 }
 
+
+
+/* ==================== Harsh ============  */
+.about-image{
+    border-radius: 15px;
+}
+
+.as_about_wrapper p{
+    margin-bottom: 1rem;
+}
+.as_about_wrapper .as_heading{
+    padding-bottom: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.as_header_wrapper .as_logo img{
+    height: 100px;
+    object-fit: contain;
+}
