@@ -349,9 +349,8 @@ span.select2-dropdown.select2-dropdown--above, .select2-container--open .select2
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     z-index: 0;
-} {
     z-index: 0 !important;
-}
+} 
 
 .select2-container {
     transition: none;
@@ -3258,5 +3257,50 @@ textarea.form-control {
 
     .youtube-float {
         bottom: 250px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===================== hero-banner ========  */
+.hero-banner .hero-content-wrapper{
+    margin: 1rem 0rem;
+    border-radius: 15px;
+    height: 450px;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('../images/owner1-Copy.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.hero-banner .hero-content-wrapper .hero-content {
+    width: 70%;
+    color: white;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+@media (max-width: 768px){
+    .hero-banner .hero-content-wrapper .hero-content {
+        width: 90%;
+        top: 50%;
+        /* bottom: 0%; */
+        left: 50%;
     }
 }
