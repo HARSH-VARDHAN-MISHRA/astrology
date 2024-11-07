@@ -2020,7 +2020,8 @@ section.as_whychoose_wrapper.as_padderTop80 {
 .modal .modal-dialog {
     margin: 0 auto;
     transform: none !important;
-    width: 500px;
+    /* width: 500px; */
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3345,7 +3346,12 @@ textarea.form-control {
 }
 
 
-
+.as_product_box .insta-icon{
+    font-size: 1.5rem;
+}
+.as_product_box .insta-icon:hover{
+    color:#f09433;
+}
 
 
 
