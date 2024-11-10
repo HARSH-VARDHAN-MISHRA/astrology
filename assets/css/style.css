@@ -155,6 +155,9 @@ a, a:hover, a:focus {
     color: var(--primary-color);
     padding: 0 40px 0 30px;
 }
+select.form-control {
+    background-color: var(--secondary-color); /* Use a different color */
+}
 .form-control::placeholder{
     color: #97b0c1;
 }
