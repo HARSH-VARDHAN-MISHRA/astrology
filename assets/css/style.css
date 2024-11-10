@@ -1,4 +1,9 @@
 /* stylesheet */
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+
+
 :root{
     --primary-color:#e5f0f5;
     --secondary-color:#ff7010;
@@ -6,6 +11,7 @@
     --dark-color2:#17384e;
     --white-color:#ffffff;
     --transition:0.4s ease-in-out;
+    --font-pacifico: "Righteous", sans-serif;
 }
 :after,:before{
     transition: all 0.2s linear;
@@ -510,7 +516,7 @@ span.select2-dropdown.select2-dropdown--above, .select2-container--open .select2
 }
 
 .as_cart_wrapper {
-    background-color: var(--dark-color2);
+    background-color: var(--secondary-color);
     padding: 14px 24px;
     border-radius: 50px;
     margin-left: 30px;
@@ -1478,8 +1484,9 @@ section.as_whychoose_wrapper.as_padderTop80 {
     padding: 25px 0 30px;
 }
 .as_breadcrum_wrapper  h1 {
-    margin: 0px 0 15px;
-    font-size: 28px;
+    margin: 0px 0 0px;
+    font-size: 32px;
+    /* font-family: var(--font-pacifico); */
 }
 .as_breadcrum_wrapper .breadcrumb {
     display: inline-flex;
@@ -1489,6 +1496,7 @@ section.as_whychoose_wrapper.as_padderTop80 {
     line-height: 18px;
     padding: 11px 30px;
     margin: 0px;
+    display: none;
 }
 .breadcrumb>li+li:before {
     content: '/\00a0/\00a0';
@@ -1946,8 +1954,8 @@ section.as_whychoose_wrapper.as_padderTop80 {
 .as_contact_form {
     padding: 46px 50px 50px;
     background-color: #17384e;
-    margin-bottom: -263px;
     position: relative;
+    margin-bottom: 3rem;
 }
 
 .as_contact_form .form-control {
@@ -2889,6 +2897,7 @@ textarea.form-control {
     .as_info_detail {
         justify-content: center;
         flex-direction: column;
+        align-items: end;
         padding: 10px;
         /* display: none; */
     }
@@ -3105,7 +3114,7 @@ textarea.form-control {
 
 
 
-/* ==================== Harsh ============  */
+/* =========================  Harsh ===================================== Harsh ============  */
 .about-image{
     border-radius: 15px;
 }
@@ -3123,9 +3132,12 @@ textarea.form-control {
     height: 100px;
     background: rgb(255, 255, 255);
     object-fit: contain;
-    border-radius: 15px;
+    border-radius: 50%;
 }
 
+.as_whychoose_wrapper.follow_family .service-item{
+    width: 100%;
+}
 .follow_family .service-item{
     background: #0e344d; 
     display: inline-block;
@@ -3150,7 +3162,13 @@ textarea.form-control {
 .follow_family .fa-youtube.as_icon{
     background-color: #ff0000;
 }
+.follow_family .fa-user-check.as_icon {
+    background-color: #26cd2b; /* Green for Years of Experience */
+}
 
+.follow_family .fa-handshake.as_icon {
+    background-color: #FF9800; /* Orange for Clients Served */
+}
 
 
 .as_footer_logo img{
@@ -3358,3 +3376,106 @@ textarea.form-control {
 .as_servicedetail_wrapper img{
     width: 100%;
 }
+
+
+
+
+/* ===================  */
+.as_header_detail .logo-name{
+    text-transform: uppercase;
+    margin-bottom: 0rem;
+    font-family: var(--font-pacifico);
+    font-size: 2rem;
+    padding: 0.6rem 0rem;
+}
+
+
+
+
+/* ======== All My Media Querry =========  */
+@media only screen and (max-width: 450px){
+    .as_header_wrapper .as_logo img {
+        height: 80px;
+        width: 110px;
+        overflow: hidden;
+    }
+    .as_header_detail .logo-name {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+/* Style for switch word cards */
+.switch-word-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.switch-word-card {
+    background-color: #0c2d43; /* Darker background to fit theme */
+    padding: 20px;
+    border-radius: 8px;
+    width: 28%; /* Adjust the width to make them responsive */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    color: #f5f5f5; /* Light text color */
+    border: 1px solid #193e57; /* Slightly lighter border to match theme */
+}
+
+.switch-word-card:hover {
+    background-color: #17384e; /* Hover effect with a lighter shade */
+    transform: translateY(-5px);
+}
+
+.switch-word-card strong {
+    display: block;
+    font-size: 16px;
+    color: #e66712; /* Orange accent for strong text */
+    margin-bottom: 10px;
+}
+
+.switch-word-card p {
+    font-size: 18px;
+    color: #708090; /* Light gray for general text */
+    margin: 0;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .switch-word-card {
+        width: 100%;
+    }
+}
+
+
+
+/* For the switch word list items */
+.switch-word-list {
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+
+.switch-word-list li {
+    background-color: #07273c; /* Dark background for list items */
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    color: #f5f5f5;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.switch-word-list li:hover {
+    background-color: #10334a; /* Lighter background on hover */
+}
+
