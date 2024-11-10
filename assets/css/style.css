@@ -3482,3 +3482,34 @@ textarea.form-control {
     background-color: #10334a; /* Lighter background on hover */
 }
 
+
+
+
+
+/* ====== Videos =======  */
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.video-card {
+    flex: 1 1 300px; /* Responsive sizing */
+    max-width: 400px;
+    background-color: var(--dark-color2);
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove scrollbar from iframe container */
+.video-card iframe {
+    width: 100%;
+    height: 350px;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+}
