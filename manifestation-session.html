@@ -206,11 +206,11 @@
     
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <form>
+                                        <form id="enquiryForm">
                                             <div class="row">
                                                 <div class="col-lg-12">
                                                     <div class="form-group">
-                                                        <select name="session" class="form-control">
+                                                        <select name="session" class="form-control" required>
                                                             <option value="" disabled selected>Select Session</option>
                                                             <option value="video-30">30 min: ₹3300</option>
                                                             <option value="video-60">1 hour: ₹6000</option>
@@ -222,7 +222,7 @@
                                                         <input type="text" name="name" required class="form-control" placeholder="Enter Name*">
                                                     </div>
                                                     <div class="form-group">
-                                                        <input type="text" name="email" class="form-control" placeholder="Enter Email*">
+                                                        <input type="text" name="email" required class="form-control" placeholder="Enter Email*">
                                                     </div>
                                                     <div class="form-group">
                                                         <input type="number" name="phone" required class="form-control" placeholder="Enter Phone Number*">
@@ -231,11 +231,12 @@
                                                 </div>
                                                 <div class="col-lg-6 col-md-6">
                                                     <div class="form-group">
-                                                        <textarea name="message" class="form-control" placeholder="Message Here..."></textarea>
+                                                        <textarea name="message" class="form-control" placeholder="Message Here..." required></textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12 col-md-12">
-                                                    <a href="javascript:;" class="as_btn">Send Enquiry</a>
+                                                    <!-- <a href="javascript:;" class="as_btn">Send Enquiry</a> -->
+                                                    <button type="submit" class="as_btn">Submit Enquiry</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -661,7 +662,42 @@
         </div>
     </div>
 
+    <script>
+        document.getElementById("enquiryForm").addEventListener("submit", async function (event) {
+            event.preventDefault();
 
+            // Collecting form data
+            const formData = {
+                serviceName: "Manifestation Session" ,
+                session: document.querySelector('select[name="session"]').value,
+                name: document.querySelector('input[name="name"]').value,
+                email: document.querySelector('input[name="email"]').value,
+                phone: document.querySelector('input[name="phone"]').value,
+                message: document.querySelector('textarea[name="message"]').value,
+            };
+
+            try {
+                // Sending form data to the server
+                const response = await fetch("https://api.email.digiindiasolutions.com/api/mail", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                if (response.ok) {
+                    alert("Enquiry sent successfully!");
+                } else {
+                    const errorData = await response.json();
+                    alert("Failed to send enquiry: " + errorData.message);
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("An error occurred. Please try again.");
+            }
+        });
+    </script>
     <!-- javascript -->
     <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>

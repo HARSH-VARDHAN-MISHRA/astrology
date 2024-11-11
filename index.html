@@ -1024,11 +1024,11 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form id="bookingForm">
+                <form id="enquiryForm">
                     <div class="modal-body">
                         <div class="form-group">
                             <!-- <label for="serviceSelect">Choose a Service:</label> -->
-                            <select id="serviceSelect" class="form-control" required>
+                            <select id="serviceSelect" class="form-control" name="selectService" required>
                                 <option value="Numerology">Numerology</option>
                                 <option value="Tarot Card">Tarot Card</option>
                                 <option value="Manifestation Session">Manifestation Session</option>
@@ -1038,17 +1038,17 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <input placeholder="Your Name:" type="text" id="userName" class="form-control" required>
+                            <input placeholder="Your Name:" type="text" id="name" name="name" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <input placeholder="Email Address:" type="email" id="userEmail" class="form-control"
+                            <input placeholder="Email Address:" type="email" name="email" id="userEmail" class="form-control"
                                 required>
                         </div>
                         <div class="form-group">
-                            <input placeholder="Phone Number:" type="tel" id="userPhone" class="form-control" required>
+                            <input placeholder="Phone Number:" type="tel" id="userPhone" name="phone" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Additional Message (Optional):" id="userMessage" class="form-control"
+                            <textarea placeholder="Additional Message (Optional):" id="userMessage" name="message" class="form-control"
                                 rows="3"></textarea>
                         </div>
                     </div>
@@ -1060,6 +1060,84 @@
         </div>
     </div>
 
+
+    <script>
+        document.getElementById("enquiryForm").addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            // Collecting form data
+            const formData = {
+                // serviceName: "Tarot Card Service" ,
+                selectService: document.querySelector('select[name="selectService"]').value,
+                name: document.querySelector('input[name="name"]').value,
+                email: document.querySelector('input[name="email"]').value,
+                phone: document.querySelector('input[name="phone"]').value,
+                message: document.querySelector('textarea[name="message"]').value,
+            };
+
+            try {
+                // Sending form data to the server
+                const response = await fetch("https://api.email.digiindiasolutions.com/api/mail", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                if (response.ok) {
+                    alert("Enquiry sent successfully!");
+                } else {
+                    const errorData = await response.json();
+                    alert("Failed to send enquiry: " + errorData.message);
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("An error occurred. Please try again.");
+            }
+        });
+    </script>
+
+<script>
+    document.getElementById("inquiryForm").addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        // Collecting product details from the modal
+        const productName = document.getElementById("productName").innerText;
+        const productPrice = document.getElementById("productPrice").innerText;
+        // const productImage = document.getElementById("productImage").src;
+
+        // Collecting customer enquiry form data
+        const formData = {
+            customerName: document.getElementById("customerName").value,
+            customerEmail: document.getElementById("customerEmail").value,
+            customerMessage: document.getElementById("customerMessage").value,
+            productName: productName,
+            productPrice: productPrice,
+        };
+
+        try {
+            // Sending the form data to the server
+            const response = await fetch("https://api.email.digiindiasolutions.com/api/mail", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (response.ok) {
+                alert("Enquiry sent successfully!");
+            } else {
+                const errorData = await response.json();
+                alert("Failed to send enquiry: " + errorData.message);
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            alert("An error occurred. Please try again.");
+        }
+    });
+</script>
 
     <!-- javascript -->
     <script src="./assets/js/jquery.min.js"></script>
