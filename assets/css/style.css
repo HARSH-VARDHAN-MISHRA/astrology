@@ -1,6 +1,6 @@
 /* stylesheet */
 
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
 
@@ -11,7 +11,7 @@
     --dark-color2: #17384e;
     --white-color: #ffffff;
     --transition: 0.4s ease-in-out;
-    --font-pacifico: "Righteous", sans-serif;
+    --font-pacifico:  "Poppins", sans-serif;
 }
 
 :after,
@@ -1076,6 +1076,9 @@ span.select2-dropdown.select2-dropdown--above,
 
 .as_service_box .as_icon img {
     border-radius: 10px;
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
 }
 
 /* .as_service_box .as_icon:after {
@@ -4120,9 +4123,11 @@ textarea.form-control {
 .as_header_detail .logo-name {
     text-transform: uppercase;
     margin-bottom: 0rem;
-    font-family: var(--font-pacifico);
+    /* font-family: var(--font-pacifico); */
     font-size: 2rem;
     padding: 0.6rem 0rem;
+    letter-spacing: 0.4rem;
+    font-weight: 800;
 }
 
 
@@ -4138,6 +4143,8 @@ textarea.form-control {
 
     .as_header_detail .logo-name {
         font-size: 1rem;
+        letter-spacing: auto;
+        text-align: end;
     }
 }
 
