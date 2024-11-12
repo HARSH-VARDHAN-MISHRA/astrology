@@ -25,45 +25,13 @@
 
 </head>
 
-<!-- <script>
-    document.getElementById("enquiryForm").addEventListener("submit", async function (event) {
-    event.preventDefault();
-
-    // Collecting form data
-    const formData = {
-        session: document.querySelector('select[name="session"]').value,
-        name: document.querySelector('input[name="name"]').value,
-        email: document.querySelector('input[name="email"]').value,
-        phone: document.querySelector('input[name="phone"]').value,
-        message: document.querySelector('textarea[name="message"]').value
-    };
-
-    try {
-        // Sending form data to the server
-        const response = await fetch("https://api.email.digiindiasolutions.com/api/mail", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(formData)
-        });
-
-        if (response.ok) {
-            const result = await response.json();
-            alert("Enquiry sent successfully!");
-        } else {
-            alert("Failed to send enquiry. Please try again later.");
-        }
-    } catch (error) {
-        console.error("Error:", error);
-        alert("An error occurred. Please try again.");
-    }
-});
-
-</script> -->
 
 <body>
 
+    <div class="loader-overlay">
+        <div class="loader"></div>
+    </div>
+    
     <!-- WhatsApp -->
     <a href="https://api.whatsapp.com/send?phone=919871955033" target="_blank" class="social-float whatsapp-float">
         <i class="fa-brands fa-whatsapp social-icon"></i>
@@ -705,6 +673,15 @@
 
 
     <script>
+          // Function to show the loader
+          function showLoader() {
+            document.querySelector('.loader-overlay').classList.add('show');
+        }
+
+        // Function to hide the loader
+        function hideLoader() {
+            document.querySelector('.loader-overlay').classList.remove('show');
+        }
         document.getElementById("enquiryForm").addEventListener("submit", async function (event) {
             event.preventDefault();
 
@@ -729,13 +706,28 @@
                 });
 
                 if (response.ok) {
-                    alert("Enquiry sent successfully!");
+                    hideLoader()
+                    // Create and show a thank you message
+                    const thankYouMessage = document.createElement('div');
+                    thankYouMessage.className = 'thank-you-message';
+                    thankYouMessage.innerHTML = 'Thank you for your enquiry!';
+                
+                    // Append the thank you message to the body or a specific container
+                    document.body.appendChild(thankYouMessage);
+                
+                    // Style the thank you message (You can adjust the styles as needed)
+                    setTimeout(() => {
+                        thankYouMessage.style.display = 'none';  // Hide the message after 3 seconds
+                        window.location.href = 'https://api.whatsapp.com/send?phone=919871955033';  // Redirect to WhatsApp
+                    }, 3000);  // Redirect after 3 seconds
                 } else {
                     const errorData = await response.json();
-                    alert("Failed to send enquiry: " + errorData.message);
+                    hideLoader()
+                    alert("Failed to send enquiry: " + errorData?.message);
                 }
             } catch (error) {
                 console.error("Error:", error);
+                hideLoader()
                 alert("An error occurred. Please try again.");
             }
         });

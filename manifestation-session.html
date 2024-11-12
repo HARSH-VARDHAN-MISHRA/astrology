@@ -27,6 +27,10 @@
 
 <body>
 
+    <div class="loader-overlay">
+        <div class="loader"></div>
+    </div>
+    
     <!-- WhatsApp -->
     <a href="https://api.whatsapp.com/send?phone=919871955033" target="_blank" class="social-float whatsapp-float">
         <i class="fa-brands fa-whatsapp social-icon"></i>
@@ -655,8 +659,19 @@
     </div>
 
     <script>
+         // Function to show the loader
+         function showLoader() {
+            document.querySelector('.loader-overlay').classList.add('show');
+        }
+
+        // Function to hide the loader
+        function hideLoader() {
+            document.querySelector('.loader-overlay').classList.remove('show');
+        }
+
         document.getElementById("enquiryForm").addEventListener("submit", async function (event) {
             event.preventDefault();
+            showLoader()
 
             // Collecting form data
             const formData = {
@@ -679,13 +694,28 @@
                 });
 
                 if (response.ok) {
-                    alert("Enquiry sent successfully!");
+                    hideLoader()
+                    // Create and show a thank you message
+                    const thankYouMessage = document.createElement('div');
+                    thankYouMessage.className = 'thank-you-message';
+                    thankYouMessage.innerHTML = 'Thank you for your enquiry!';
+                
+                    // Append the thank you message to the body or a specific container
+                    document.body.appendChild(thankYouMessage);
+                
+                    // Style the thank you message (You can adjust the styles as needed)
+                    setTimeout(() => {
+                        thankYouMessage.style.display = 'none';  // Hide the message after 3 seconds
+                        window.location.href = 'https://api.whatsapp.com/send?phone=919871955033';  // Redirect to WhatsApp
+                    }, 3000);  // Redirect after 3 seconds
                 } else {
                     const errorData = await response.json();
+                    hideLoader()
                     alert("Failed to send enquiry: " + errorData.message);
                 }
             } catch (error) {
                 console.error("Error:", error);
+                hideLoader()
                 alert("An error occurred. Please try again.");
             }
         });
